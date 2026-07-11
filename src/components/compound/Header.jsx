@@ -2,13 +2,13 @@
 // import { useNavigate } from "react-router-dom";
 
 function Header() {
-  //  const navigate = useNavigate();
-
   const handleLogout = () => {
-    localStorage.clear()
+    localStorage.clear();
     window.location.reload(true);
-    // navigate("/login")
-  }
+  };
+  
+  const isLoggedIn = !!localStorage.getItem('token');
+
   return (
     <header className="header">
       <div className="logo">
@@ -21,16 +21,24 @@ function Header() {
           <li><a href="/about">About</a></li>
           <li><a href="/woods">Woods</a></li>
           <li><a href="/contact">Contact</a></li>
-          <li><a href="/cms">CMS</a></li>
-          <li><a href="/signup">Sign Up</a></li>
-
-          {localStorage.getItem('token') ? <li><a href="/cms">CMS</a></li> : <li><a href="/login">Login</a></li>}
-
-
+          {isLoggedIn ? (
+            <>
+              <li><a href="/cms">CMS</a></li>
+            </>
+          ) : (
+            <>
+              <li><a href="/login">Login</a></li>
+              <li><a href="/signup">Sign Up</a></li>
+            </>
+          )}
         </ul>
       </nav>
-      {localStorage.getItem('token') ? <button className="btn" onClick={() => handleLogout()}>Logout</button> : ""}
-
+      
+      {isLoggedIn && (
+        <button className="btn" onClick={handleLogout}>
+          Logout
+        </button>
+      )}
     </header>
   );
 }

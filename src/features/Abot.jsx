@@ -6,40 +6,41 @@ export default function AboutDeatil() {
       <div className="about-container">
         <div className="about-image">
           <img
-            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800"
-            alt="Team"
+            src="https://tse1.mm.bing.net/th/id/OIP.z2enAVvjsQVmIBuVkAeFVAHaE7?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+            alt="Timber Yard"
           />
         </div>
 
         <div className="about-content">
-          <span className="about-tag">Who We Are</span>
+          <span className="about-tag">About MyWoods</span>
 
-          <h1>Building Digital Experiences That Matter</h1>
+          <h1>Sourcing Premium Sustainable Timber</h1>
 
           <p>
-            We are a passionate team of developers and designers dedicated to
-            creating modern, responsive, and user-friendly web applications.
-            Our mission is to transform ideas into powerful digital products.
+            At MyWoods, we connect developers, architects, and woodcraft artisans with 
+            verified regional timber suppliers. Our platform bridges the gap in the timber supply 
+            chain, ensuring transparency in quality grades, wood origin, density specifications, 
+            and ethical forest harvesting practices.
           </p>
 
           <div className="about-stats">
             <div className="stat">
-              <h2>180+</h2>
-              <p>Projects</p>
+              <h2>10+</h2>
+              <p>Wood Yards</p>
             </div>
 
             <div className="stat">
-              <h2>120+</h2>
-              <p>Clients</p>
+              <h2>400</h2>
+              <p>Clients Served</p>
             </div>
 
             <div className="stat">
-              <h2>5+</h2>
+              <h2>2+</h2>
               <p>Years Experience</p>
             </div>
           </div>
 
-          <button>Learn More</button>
+          <a href="/woods" className="btn-forest">Browse Catalog</a>
         </div>
       </div>
     </section>

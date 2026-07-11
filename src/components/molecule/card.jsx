@@ -1,5 +1,9 @@
 
 function Card({ item }) {
+  const handleBook = () => {
+    alert(`Thank you for your interest in ${item.title}! We have sent a booking inquiry to the supplier.`);
+  };
+
   return (
     <div className="card">
       <img src={item.image} alt={item.title} className="card-image" />
@@ -13,7 +17,7 @@ function Card({ item }) {
 
         <div className="card-footer">
           <h3>{item.price}</h3>
-          <button>Book Now</button>
+          <button onClick={handleBook}>Book Now</button>
         </div>
       </div>
     </div>

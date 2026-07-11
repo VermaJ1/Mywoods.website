@@ -1,49 +1,31 @@
-import { useEffect, useState } from "react";
 import HomeDetail from "../features/Home";
-import Layout from "../layout/page";
 import CardData from "../sampleData/cardData";
-import { Col, Container, Row } from "react-bootstrap";
 import Card from "../components/molecule/card";
 
 const Home = () => {
-
     return (
         <>
-            <HomeDetail data={CardData} />
+            <HomeDetail />
 
-
-            <Container fluid>
-                <Row>
-
-                    {/* {CardData.map((item) => (
-                        <Col>
-                            <Card key={item.id} item={item} />
-                        </Col>
-                    ))} */}
-
-
-                    <Col md={1} className="column_b">
-                    
-                    </Col>
-
-                    <Col md={8} className="column_b">
-                    
-                    </Col>
-
-                    <Col md={1} className="column_b">
-                    
-                    </Col>
-
-<Col md={2} className="column_b">
-                   
-                    </Col>
-
-<Col md={2} className="column_b">
-                    
-                    </Col>
-
-                </Row>
-            </Container>
+            {/* Featured Cards Section */}
+            <section className="featured-home-section" style={{ backgroundColor: "var(--forest-soft)", padding: "80px 20px" }}>
+                <div className="section-header">
+                    <h2>Featured Timber Species</h2>
+                    <p>Explore some of our premium sustainable timber varieties currently popular in building and craftsmanship.</p>
+                </div>
+                
+                <div className="cards-container">
+                    {CardData.slice(0, 3).map((item) => (
+                        <Card key={item.id} item={item} />
+                    ))}
+                </div>
+                
+                <div style={{ textAlign: "center", marginTop: "40px" }}>
+                    <a href="/woods" className="btn-forest">
+                        View All Woods
+                    </a>
+                </div>
+            </section>
         </>
     );
 };

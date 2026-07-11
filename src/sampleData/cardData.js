@@ -7,7 +7,7 @@ const CardData = [
     category: "Travel",
     description:
       "Explore breathtaking mountains and enjoy unforgettable hiking experiences.",
-    price: "$199",
+    price: "$99",
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const CardData = [
     category: "Vacation",
     description:
       "Relax on crystal-clear beaches with amazing sunset views.",
-    price: "$249",
+    price: "$49",
   },
   
   {
@@ -28,7 +28,7 @@ const CardData = [
     category: "Nature",
     description:
       "Reconnect with nature through peaceful camping adventures.",
-    price: "$149",
+    price: "$70",
   },
   
  
