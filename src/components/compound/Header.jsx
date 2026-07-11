@@ -22,6 +22,8 @@ function Header() {
           <li><a href="/woods">Woods</a></li>
           <li><a href="/contact">Contact</a></li>
           <li><a href="/cms">CMS</a></li>
+          <li><a href="/signup">Sign Up</a></li>
+
           {localStorage.getItem('token') ? <li><a href="/cms">CMS</a></li> : <li><a href="/login">Login</a></li>}
 
 

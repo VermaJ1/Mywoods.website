@@ -47,7 +47,7 @@ const CMS = () => {
 
     const callAPI = async () => {
         try {
-            const response = await fetch("https://mywoods-api.onrender.com/api/woods", {
+            const response = await fetch("https://testbackend-fdpd.onrender.com/api/woods", {
                 method: "GET",
             });
 
@@ -85,7 +85,7 @@ const CMS = () => {
                 available: true,
             };
 
-            const response = await fetch("https://mywoods-api.onrender.com/api/woods", {
+            const response = await fetch("https://testbackend-fdpd.onrender.com/api/woods", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -115,7 +115,7 @@ const CMS = () => {
     const callDeleteAPI = async () => {
         try {
 
-            const response = await fetch("https://mywoods-api.onrender.com/api/woods/" + id, {
+            const response = await fetch("https://testbackend-fdpd.onrender.com/api/woods/" + id, {
                 method: "DELETE",
                 headers: {
                     "Content-Type": "application/json",
@@ -147,7 +147,7 @@ const CMS = () => {
                 name: name,
                 description: description,
             };
-            const response = await fetch("https://mywoods-api.onrender.com/api/woods/" + idData?._id, {
+            const response = await fetch("https://testbackend-fdpd.onrender.com/api/woods/" + idData?._id, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
